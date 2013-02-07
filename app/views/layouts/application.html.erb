@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Manager</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	
+	<!-- Begin Wrapper -->
+<div id="wrapper">
+
+  <!-- Begin Header -->
+  <div id="header">
+
+   Allieson Serd's Awesome Assignment 4 Event Management Page
+
+  </div>
+  <!-- End Header -->
+
+  <!-- Begin Navigation -->
+  <div id="navigation">
+
+    
+	<%= link_to 'Home', homes_path %>
+	<%= link_to 'Exhibitors', exhibitors_path %>
+    <%= link_to 'Meetings', meetings_path %>
+    <%= link_to 'Venues', venues_path %>
+    <%= link_to 'Exhibitor Categories', exhibitor_categories_path %>
+
+  </div>
+  <!-- End Navigation -->
+
+  <!-- Begin Content -->
+  <div id="content">
+
+<%= yield %>
+
+</div>
+  <!-- End Content -->
+  <!-- Begin Footer -->
+  <div id="footer">
+
+    Copyright 2013, Event Management System, Inc. Allieson Serd
+
+  </div>
+  <!-- End Footer -->
+
+</div>
+<!-- End Wrapper -->
+
+</body>
+</html>

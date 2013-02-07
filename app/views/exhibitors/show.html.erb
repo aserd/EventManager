@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @exhibitor.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @exhibitor.description %>
+</p>
+
+<p>
+  <b>Sponsor:</b>
+  <%= @exhibitor.sponsor.name if @exhibitor.sponsor %>
+</p>
+<p>
+  <b>Exhibitor category:</b>
+  <%= @exhibitor.exhibitor_category.full_name %>
+</p>
+
+
+<div id="floatbox">
+	<b>Meetings:</b><br />
+	<% @sponsoredmeetings.each do |c| %>
+		<%= link_to c.name, meeting_path(c.id) %><br />
+	<% end %>
+</div>
+
+<%= link_to 'Edit', edit_exhibitor_path(@exhibitor) %> |
+<%= link_to 'Back', exhibitors_path %>
