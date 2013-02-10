@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  prize: MyText
+  start_date: 2013-02-08 23:13:43
+  end_date: 2013-02-08 23:13:43
+  present_to_win: false
+  sponsor_id: 1
+  meeting_id: 1
+
+two:
+  prize: MyText
+  start_date: 2013-02-08 23:13:43
+  end_date: 2013-02-08 23:13:43
+  present_to_win: false
+  sponsor_id: 1
+  meeting_id: 1

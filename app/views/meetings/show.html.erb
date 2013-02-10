@@ -23,6 +23,10 @@
 	<b>Sponsors:</b><br />
 	<% @meetingsponsors.each do |c| %>
 		<%= link_to c.full_name, sponsor_path(c.id) %> <br />
+	<% end %><br /><br /><br />
+	<b>Contests:</b><br />
+	<% @meetingcontests.each do |c| %>
+		<%= link_to c.prize, contest_path(c.id) %> <br />
 	<% end %>
 </div>
 

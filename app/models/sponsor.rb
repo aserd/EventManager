@@ -5,6 +5,7 @@ class Sponsor < ActiveRecord::Base
 	validates :name, :presence => true
 	validates :url, :presence => true
 	
+	has_many :contests
 	has_and_belongs_to_many :meetings
 	has_one :exhibitor
 	def full_name

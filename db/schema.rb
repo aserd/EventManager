@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130203044354) do
+ActiveRecord::Schema.define(:version => 20130209041343) do
+
+  create_table "contests", :force => true do |t|
+    t.text     "prize"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.boolean  "present_to_win"
+    t.integer  "sponsor_id"
+    t.integer  "meeting_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
 
   create_table "exhibitor_categories", :force => true do |t|
     t.string   "name"
@@ -40,6 +51,11 @@ ActiveRecord::Schema.define(:version => 20130203044354) do
     t.integer  "venue_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "meetings_sponsors", :id => false, :force => true do |t|
+    t.integer "meeting_id"
+    t.integer "sponsor_id"
   end
 
   create_table "sponsors", :force => true do |t|

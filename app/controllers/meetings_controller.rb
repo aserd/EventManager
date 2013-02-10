@@ -16,6 +16,7 @@ class MeetingsController < ApplicationController
     @meeting = Meeting.find(params[:id])
 	@meetingsponsors = @meeting.sponsors
 	@meetingvenues = @meeting.venue
+	@meetingcontests = @meeting.contests
 
     respond_to do |format|
       format.html # show.html.erb
